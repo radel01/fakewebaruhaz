@@ -3,8 +3,11 @@ import { KosarContext } from "../contexts/KosarContext";
 
 function Kosar() {
     const { kosarLista } = useContext(KosarContext);
-  return ( 
-    <div>{kosarLista[0]}</div>
+    return ( 
+        kosarLista.map((termek)=>{
+            return <div>{termek.title}</div>
+        })
+    
     
   )
 }
